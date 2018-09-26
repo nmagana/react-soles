@@ -1,5 +1,5 @@
 # react-soles
-GitHub repo to teach SOLES members the fundamentals of JavaScript and React.
+Welcome to the React Tech @ SOLES course! Below you will find helpful links to help set up your environment and a tentative course schedule for the quarter!
 
 # Environment Setup
 ## Visual Studio Code 
