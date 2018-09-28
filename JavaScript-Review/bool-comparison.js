@@ -9,19 +9,19 @@
 3 == 3 evaluates to True, and 3 == '3' also evaluates to True.
 */
 
-console.log('Ucla' === 'Ucla') // True
-console.log('UCLA' === 'ucla') // False
-console.log(3 === 3) // True
-console.log(3 == '3') // True
-console.log(3 === '3') // False
+console.log('Ucla' === 'Ucla'); // True
+console.log('UCLA' === 'ucla'); // False
+console.log(3 === 3); // True
+console.log(3 == '3'); // True
+console.log(3 === '3'); // False
 
 // !== Returns true if the operands are of the same type but not equal, or are of different type, false otherwise.
 // != Returns true if the operands are equal but not the same type, false otherwise.
 
-console.log('Ucla' !== 3) // True
-console.log('Ucla' !== 'Ucla') // False
-console.log(3 !== '3') // True
-console.log(3 != '3') // False
+console.log('Ucla' !== 3); // True
+console.log('Ucla' !== 'Ucla'); // False
+console.log(3 !== '3'); // True
+console.log(3 != '3'); // False
 
 /* the following comparison operators exist as well:
 > greater than
@@ -30,7 +30,7 @@ console.log(3 != '3') // False
 <= less than or equal to
 */
 
-console.log(4 > 3) // True
-console.log(4 >= 4) // True
-console.log(4 < 4) // False
-console.log(3 <= 4) // True
+console.log(4 > 3); // True
+console.log(4 >= 4); // True
+console.log(4 < 4); // False
+console.log(3 <= 4); // True
