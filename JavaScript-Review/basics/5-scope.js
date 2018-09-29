@@ -19,10 +19,10 @@ in an outer scope assigns a different value.
 
 let var1 = 4; // global scope
 if (true) {
-    let var1 = 3 // local scope, example of shadowing
-    console.log(var1) // Prints 3
+    let var1 = 3; // local scope, example of shadowing
+    console.log(var1); // Prints 3
 }
-console.log(var1) // Prints 4
+console.log(var1); // Prints 4
 
 /* 
 Leaked Globals - When a variable is used but has not been declared by using let,
@@ -34,10 +34,10 @@ make sure to use the let keyword when making a variable.
 
 // Don't worry about the syntax for a function yet, it will be covered in the next lesson!
 let myFunc = function() {
-    bruins = 5
-    console.log(bruins)
+    bruins = 5;
+    console.log(bruins);
 }
 
-myFunc()
-console.log(bruins) // this will still work because now the compiler treats it as a global!
+myFunc();
+console.log(bruins); // this will still work because now the compiler treats it as a global!
 
