@@ -1,4 +1,6 @@
 // Lesson 5: Variable Scope
+// In this lesson , you will learn about different types of scopes
+// in JavaScript.
 
 // JavaScript uses Lexical (Static) Scoping. This means that the block, or scope, 
 // in which variables are created plays a big part if it can get accessed

@@ -1,9 +1,10 @@
-// Lesson 6: Function Basics
+// Lesson 7: Function Basics
 
 // Function Syntax
-// any number of arguments can be added, also don't need to have any arguments.
+// Any number of arguments can be added, also don't need to have any arguments.
 // For functions that are called and an argument isn't passed in, that argument will
-// default to undefined
+// default to undefined.
+// Lastly, function parameters or variable names cannot be accessed outside the function.
 
 let sum = function(arg1, arg2) {
     // put code inside function here

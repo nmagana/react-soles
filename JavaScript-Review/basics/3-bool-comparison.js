@@ -1,4 +1,7 @@
 // Lesson 3: Bool and Comparison Operators
+// In this Lesson you will learn about different comparison operators.
+
+
 /* 
 === is True when type and value are equal. For example:
 3 === 3 evaluates to True, while 3 === '3' evaluates to False.

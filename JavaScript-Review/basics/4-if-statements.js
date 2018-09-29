@@ -1,6 +1,6 @@
 // Lesson 4: If Statements
-
-// You can control what statements get executed by adding if statements
+// In this lesson you will learn how to control the flow of statements by using
+// if, else if, and else, while also learning about logical operators.
 
 let myVar = 10;
 
