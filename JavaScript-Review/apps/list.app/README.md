@@ -20,7 +20,7 @@ Live-server is extremely useful, as you can make changes and have your local web
 ## Using Chrome Developer Tools
 You can use the console in Chrome Developer Tools to inspect elements of HTML pages and look at the console that can be used to debug your JavaScript file. You can access it by clicking on the three dots in the upper right corner -> More Tools -> Developer Tools. The Elements tab shows the HTML page while the Console tab shows the output from console from the JavaScript file. 
 
-## Getting Started
+## Practice HTML
 Put the following code into index.html.
 ```
 <!DOCTYPE <!DOCTYPE html>
@@ -31,8 +31,9 @@ Put the following code into index.html.
     <body>
         <h1>List App</h1>
         <h2>Create your list!</h2>
-        <p> Let's get started</p>
-        <p> I love SOLES</p>
+        <p id="first"> Let's get started</p>
+        <p id="second"> I love SOLES</p>
+        <button> Create List Item </button>
         <script src="list-app.js"></script>
     </body>
 </html>
@@ -49,6 +50,12 @@ You can access an element from its tag by using the `querySelector` method. This
 
 ```
 const pElement = document.querySelector('p');
+console.log(pElement);
+```
+
+You can also select an element by its id. The syntax is shown below.
+```
+const pElement = document.querySelector('#second');
 console.log(pElement);
 ```
 
@@ -96,3 +103,20 @@ Now that the paragraph element is created, use the `appendChild` method to appen
 ```
 document.querySelector('body').appendChild(paragraphElement);
 ```
+
+### Handle User Interaction
+You probably have noticed the `Create List Item` button on the web page. As of now, the button is pretty useless, so let's change that. 
+
+First, grab the button element by using `querySelector`.
+```
+const listButton = document.querySelector('button')
+```
+
+Next, use the `addEventListener` object to have something happen whenever the button is clicked. The first parameter is the type of event (in this scenario, it is `"click"`. The second argument is a callback function. Use the parameter e to get information regarding the event that occured. Use this code in this section to have the button change to `I'm different` when the button is clicked.
+```
+listButton.addEventListener('click', function(e) {
+e.target.textContent = "I'm different"
+})
+```
+
+
