@@ -29,11 +29,11 @@ console.log(storeItems.indexOf({
 // that returns true.
 
 console.log(storeItems.findIndex(function(storeItem) {
-    if (storeItem.aisle == 1 && storeItem.item == 'Eggs') {return true}
+    if (storeItem.aisle == 1 && storeItem.item == 'Eggs') {return true;}
 }));
 
 // In order to get the actual item, use the find method.
 console.log(storeItems.find(function(storeItem) {
-    if (storeItem.aisle == 8) {return true}
+    if (storeItem.aisle == 8) {return true;}
 }));
 // above returns the object with item equal to Chicken.
