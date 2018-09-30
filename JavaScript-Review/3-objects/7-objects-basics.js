@@ -33,3 +33,15 @@ let convertFahrenheit = function (fahrenheit) { return {
 
 temperatureObject = convertFahrenheit(50);
 console.log(temperatureObject);
+
+// Note: You can declare an object with the const keyword. You can still change variables
+// inside the object, but you can't reassign the object.
+
+const house = {
+    rooms: 4, 
+    bathrooms: 2
+};
+
+house.rooms = 0; // this will work
+
+// house = {} <= this will cause the program to crash
