@@ -1,3 +1,5 @@
+# List App
+
 ## Setting Up a Web Server
 We will be using live-server to set up a web server for local development. Download it with the following command
 
@@ -40,7 +42,7 @@ Replace the `<Your Name Here>` with your name. If you have live-server set up, y
 ## Document Object Model (DOM)
 The DOM allows you to change elements in HTML in JavaScript. You use the global variable `document` in the JavaScript file to access the DOM. 
 
-### Document Methods/Properties
+### Document Methods/Properties Review
 
 #### querySelector
 You can access an element from its tag by using the `querySelector` method. This method grabs the first element with the `<p>` tag. If you put this code in the list-app.js file, you will get `<p> Let's get started! </p>`.
@@ -80,4 +82,17 @@ pElements.forEach(function(pElement) {
 
 ### Adding Elements via the DOM
 
+To create a new element at the end of body element, follow these steps.
 
+#### Create Element and Add Content
+You will first need to create a DOM element with the `createElement` method. You can specify what element tag you want. The following line will create a paragraph element. You can then add content by setting the textContent that we used previously.
+```
+const paragraphElement = document.createElement('p');
+paragraphElement.textContent = 'I am a new paragraph!';
+```
+#### Appending to Body Tag
+Now that the paragraph element is created, use the `appendChild` method to append the paragraph element. To append it to the end of the body tag, you first must use `querySelector` to get that element. Try the code above and below in the list-app.js to see your new paragraph element!
+
+```
+document.querySelector('body').appendChild(paragraphElement);
+```
