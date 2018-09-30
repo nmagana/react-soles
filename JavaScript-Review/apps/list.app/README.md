@@ -33,6 +33,7 @@ Put the following code into index.html.
         <h2>Create your list!</h2>
         <p id="first"> Let's get started</p>
         <p id="second"> I love SOLES</p>
+        <input>
         <button> Create List Item </button>
         <script src="list-app.js"></script>
     </body>
