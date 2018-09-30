@@ -32,16 +32,16 @@ reminders.pop();
 console.log(reminders)
 
 // shift - removes an element from the beginning of an array
-reminders.shift()
-console.log(reminders)
+reminders.shift();
+console.log(reminders);
 
 // splice - allows to insert, remove, or do both at any index
 // first argument - index to insert/delete
 // second argument - num items to delete
 // third argument, items to insert
-reminders.splice(1, 0, 1, 2, 3)
-console.log(reminders)
+reminders.splice(1, 0, 1, 2, 3);
+console.log(reminders);
 
 // deletes 2 items starting at index 3, and also inserts 900 and 1000
-reminders.splice(3, 2, 900, 1000)
-console.log(reminders)
+reminders.splice(3, 2, 900, 1000);
+console.log(reminders);
