@@ -29,8 +29,8 @@ Put the following code into index.html.
     <body>
         <h1>List App</h1>
         <h2>Create your list!</h2>
-        <p> Let's get started! </p>
-        <p> I love SOLES! </p>
+        <p> Let's get started</p>
+        <p> I love SOLES</p>
         <script src="list-app.js"></script>
     </body>
 </html>
@@ -38,18 +38,46 @@ Put the following code into index.html.
 Replace the `<Your Name Here>` with your name. If you have live-server set up, you can see the change in the web page when you save. This line `<script src="notes-app.js"></script>` loads in JavaScript from list-app.js. Since we are loading it inline, don't add anymore JavaScript in between the script tags.
 
 ## Document Object Model (DOM)
-The DOM allows you to change elements in HTML in JavaScript. You use the global variable `document` in the JavaScript file to access the DOM. You can access an element from its tag by using the `querySelector` method. This method grabs the first element with the `<p>` tag.
+The DOM allows you to change elements in HTML in JavaScript. You use the global variable `document` in the JavaScript file to access the DOM. 
+
+### Document Methods/Properties
+
+#### querySelector
+You can access an element from its tag by using the `querySelector` method. This method grabs the first element with the `<p>` tag. If you put this code in the list-app.js file, you will get `<p> Let's get started! </p>`.
 
 ```
-const pElement = document.querySelector('p')
-console.log(pElement)
+const pElement = document.querySelector('p');
+console.log(pElement);
 ```
 
-If you put this code in the list-app.js file, you will get `<p> Let's get started! </p>`.
-
+#### querySelectorAll
 You can grab all elements with `<p>` tags by using the `querySelectorAll` method.
 
 ```
-const pElements = document.querySelectorAll('p')
-console.log(pElements)
+const pElements = document.querySelectorAll('p');
+console.log(pElements);
 ```
+
+#### remove
+You can use the `remove` method to remove an element via the DOM. You can see how you can use integrate forEach to loop through each element in pElements. Now all elements with `<p>` will be removed from the web page.
+
+```
+const pElements = document.querySelectorAll('p');
+pElements.forEach(function(pElement) {
+    pElement.remove()
+})
+```
+
+#### textContent
+You can also access the text content of an element by using the `textContent` property. The following example adds an exclamation point to each of the `<p>` elements.
+
+```
+const pElements = document.querySelectorAll('p');
+pElements.forEach(function(pElement) {
+    pElement.textContent += '!';
+})
+```
+
+### Adding Elements via the DOM
+
+
