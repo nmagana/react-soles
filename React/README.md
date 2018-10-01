@@ -25,7 +25,7 @@ You should now have a node_modules directory, which holds all the dependencies f
 
 Now, run the following command to see if the web page gets served up. The following command will only work if you have live-server installed, so make sure you have that installed.
 ```
-live-server public/index.html 
+live-server public
 ```
 If everything is working, you should have `Welcome to Tech @ SOLES!`. Contact Nico Magana if this isn't the case!
 
