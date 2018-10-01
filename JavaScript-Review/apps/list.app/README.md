@@ -30,14 +30,10 @@ Put the following code into index.html.
     <body>
         <h1>List App</h1>
         <h2>Create your list!</h2>
-<<<<<<< HEAD
-        <p>Created by <Your Name Here></p>
-=======
         <p id="first"> Let's get started</p>
         <p id="second"> I love SOLES</p>
         <input>
         <button> Create List Item </button>
->>>>>>> e191de61267948ce5d69aac27e147fb1d2768fc9
         <script src="list-app.js"></script>
     </body>
 </html>
