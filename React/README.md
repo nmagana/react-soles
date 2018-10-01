@@ -16,7 +16,7 @@ Download Babel with the following command.
 yarn global add babel-cli@6.24.1
 ```
 
-### Get Web Page Running
+### Get the Web Page Running
 Run the following command:
 ```
 yarn install
