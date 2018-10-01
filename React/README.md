@@ -15,11 +15,8 @@ Download Babel with the following command.
 ```
 yarn global add babel-cli@6.24.1
 ```
-Make sure you run the following two commands in the app directory. 
+Now run the following command:
 ```
-yarn init
+yarn install
 ```
-Press enter for all the prompts given. You should get a package.json sitting in the app directory now. Now download the dependencies by inputting hte following command:
-```
-yarn add babel-preset-react@6.24.1 babel-preset-env@1.5.2
-```
+You should now have a node_modules directory, which holds all the dependencies for the project.
