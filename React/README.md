@@ -15,8 +15,18 @@ Download Babel with the following command.
 ```
 yarn global add babel-cli@6.24.1
 ```
-Now run the following command:
+
+### Get Web Page Running
+Run the following command:
 ```
 yarn install
 ```
 You should now have a node_modules directory, which holds all the dependencies for the project.
+
+Now, run the following command to see if the web page gets served up. The following command will only work if you have live-server installed, so make sure you have that installed.
+```
+live-server public/index.html 
+```
+If everything is working, you should have `Welcome to Tech @ SOLES!`. Contact Nico Magana if this isn't the case!
+
+
