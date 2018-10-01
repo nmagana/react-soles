@@ -19,7 +19,39 @@ console.log(multiplication(1,2))
 // You can even write it in simpler syntax.
 // No return statement is required, as it acts like an implied return statement.
 multiplication = (arg1, arg2) => arg1 * arg2;
-console.log(multiplication(1,2))
+console.log(multiplication(1,2));
+
+// arrow functions and objects
+let user = {
+    name: 'Nico',
+    getName() {
+        function printName() {
+            console.log(this.name)
+        }
+        printName()
+    }
+}
+
+user.getName() // undefined is printed
+// this occurs because the this keyword is trying
+// to find name within its current scope, but there is no name variable
+// in its scope
+
+// use arrows functions instead, which will actually grab
+// the this value from its parent, therefore being able
+// to get name in our example
+
+user = {
+    name: 'Nico',
+    getName() {
+        printName = () => {
+            console.log(this.name)
+        }
+        printName()
+    }
+}
+
+user.getName() // will actually print Nico
 
 // Ternary Operator Syntax
 // condition ? Value if true: Value if false
@@ -27,4 +59,4 @@ let firstNum = 7;
 let secondNum = 8;
 let isMultiplication = true;
 let result = isMultiplication ? firstNum * secondNum : firstNum / secondNum;
-console.log(result) // prints the multiplication. Try it when it is false!
+console.log(result); // prints the multiplication.

@@ -6,6 +6,7 @@
 // default to undefined.
 // Lastly, function parameters or variable names cannot be accessed outside the function.
 
+// This is called a function expression
 let sum = function(arg1, arg2) {
     // put code inside function here
     
@@ -16,6 +17,13 @@ let sum = function(arg1, arg2) {
 // syntax to call function and save to variable
 mySum = sum(3, 4);
 console.log(mySum);
+
+// This is called a function declaration
+function example(arg1) {
+    return arg1;
+}
+
+console.log(example(100))
 
 // Note: any number of arguments can be added to the function call and the compiler will not complain
 console.log(sum(1, 2, 3, 4, 5)); // still compiles, prints 3
