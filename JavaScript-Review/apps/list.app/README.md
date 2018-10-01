@@ -108,12 +108,22 @@ You probably have noticed the `Create List Item` button on the web page. As of n
 
 First, grab the button element by using `querySelector`.
 ```
-const listButton = document.querySelector('button')
+const listButton = document.querySelector('button');
 ```
 
 Next, use the `addEventListener` object to have something happen whenever the button is clicked. The first parameter is the type of event (in this scenario, it is `"click"`. The second argument is a callback function. Use the parameter e to get information regarding the event that occured. Use this code in this section to have the button change to `I'm different` when the button is clicked.
 ```
 listButton.addEventListener('click', function(e) {
 e.target.textContent = "I'm different"
-})
+});
 ```
+There are many other tags available in JavaScript. The remaining tags that are used in the following list app are `form` and `input`. Try to figure out how they work in the app!
+
+## List App
+You can run the list app by running:
+```
+live-server list.app
+```
+You will now see a simple List App web page. Mess around with it! The goal is for you to implement a clear all button directly on the page! Good luck!
+
+
