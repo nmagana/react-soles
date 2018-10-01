@@ -26,11 +26,6 @@ Put the following code into index.html.
 <!DOCTYPE <!DOCTYPE html>
 <html>
     <head>
-<<<<<<< HEAD
-        
-=======
-       
->>>>>>> e191de61267948ce5d69aac27e147fb1d2768fc9
     </head>
     <body>
         <h1>List App</h1>
@@ -47,10 +42,6 @@ Put the following code into index.html.
     </body>
 </html>
 ```
-<<<<<<< HEAD
-Replace the `<Your Name Here>` with your name. If you have live-server set up, you can see the change in the web page when you save. This line `<script src="list-app.js"></script>` loads in JavaScript from list-app.js. Since we are loading it inline, don't add anymore JavaScript in between the script tags. The script tags is placed at the end of body, to wait until all the elements are created.
-=======
-Replace the `<Your Name Here>` with your name. If you have live-server set up, you can see the change in the web page when you save. This line `<script src="notes-app.js"></script>` loads in JavaScript from list-app.js. Since we are loading it inline, don't add anymore JavaScript in between the script tags.
 
 ## Document Object Model (DOM)
 The DOM allows you to change elements in HTML in JavaScript. You use the global variable `document` in the JavaScript file to access the DOM. 
@@ -130,6 +121,3 @@ listButton.addEventListener('click', function(e) {
 e.target.textContent = "I'm different"
 })
 ```
-
-
->>>>>>> e191de61267948ce5d69aac27e147fb1d2768fc9
