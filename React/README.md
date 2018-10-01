@@ -11,11 +11,11 @@ npm install -g yarn
 ### Babel
 Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments. 
 
-Download Babel by first navigating to the app directory and then doing the following commands:
+Download Babel with the following command.
 ```
 yarn global add babel-cli@6.24.1
 ```
-Then do the following command:
+Make sure you run the following two commands in the app directory. 
 ```
 yarn init
 ```
