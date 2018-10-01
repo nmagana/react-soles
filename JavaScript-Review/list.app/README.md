@@ -7,7 +7,7 @@ We will be using live-server to set up a web server for local development. Downl
 
 You can then create a local web page with the following command:
 
-`live-server <path-to-folder>`
+`live-server list.app`
 
 You can also specify a browser you want to use like so:
 
