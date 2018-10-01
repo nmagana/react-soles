@@ -39,7 +39,9 @@ user.getName() // undefined is printed
 
 // use arrows functions instead, which will actually grab
 // the this value from its parent, therefore being able
-// to get name in our example
+// to get name in our example. However, because of this, don't use
+// arrow functions as methods in the object, since the this object
+// will be initialize to undefined
 
 user = {
     name: 'Nico',
