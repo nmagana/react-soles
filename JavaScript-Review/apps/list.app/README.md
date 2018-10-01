@@ -1,4 +1,4 @@
-# List App
+# List App Overview
 
 ## Setting Up a Web Server
 We will be using live-server to set up a web server for local development. Download it with the following command
@@ -119,7 +119,7 @@ e.target.textContent = "I'm different"
 ```
 There are many other tags available in JavaScript. The remaining tags that are used in the following list app are `form` and `input`. Try to figure out how they work in the app!
 
-## List App
+## Running the List App, Plus Your Challenge!
 You can run the list app by running:
 ```
 live-server list.app
