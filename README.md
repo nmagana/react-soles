@@ -13,6 +13,8 @@ Node.js will allow you to run JavaScript files. [Download here](https://nodejs.o
 
 ## cmder (Terminal Emulator for Windows)
 
+Why not git bash
+
 If you are running Windows, install cmder to avoid using Window's wack console) [Download here](http://cmder.net).
 
 ## Setting Up 
