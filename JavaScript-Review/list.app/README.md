@@ -1,7 +1,6 @@
 # Table of Contents
   * [Setting Up a Web Server](#web-server)
   * [Using Chrome Developer Tools](#chrome-tools)
-  * [Sample HTML](#first-html)
   * [Document Object Model (DOM)](#dom)
   * [Running the List App, Plus Your Challenge](#challenge)
 
@@ -24,25 +23,6 @@ Live-server is extremely useful, as you can make changes and have your local web
 
 ## Using Chrome Developer Tools <a id="chrome-tools"></a>
 You can use the console in Chrome Developer Tools to inspect elements of HTML pages and look at the console that can be used to debug your JavaScript file. You can access it by clicking on the three dots in the upper right corner -> More Tools -> Developer Tools. The Elements tab shows the HTML page while the Console tab shows the output from console from the JavaScript file. 
-
-## Sample HTML <a id="first-html"></a>
-Put the following code into index.html.
-```
-<!DOCTYPE <!DOCTYPE html>
-<html>
-    <head>
-    </head>
-    <body>
-        <h1>List App</h1>
-        <h2>Create your list!</h2>
-        <p id="first"> Let's get started</p>
-        <p id="second"> I love SOLES</p>
-        <input>
-        <button> Create List Item </button>
-        <script src="list-app.js"></script>
-    </body>
-</html>
-```
 
 ## Document Object Model (DOM) <a id="dom"></a>
 The DOM allows you to change elements in HTML in JavaScript. You use the global variable `document` in the JavaScript file to access the DOM. 
