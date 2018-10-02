@@ -124,6 +124,6 @@ You can run the list app by running:
 ```
 live-server list.app
 ```
-You will now see a simple List App web page. Mess around with it! The goal is for you to implement a clear all button directly on the page! Good luck!
+You will now see a simple List App web page. Mess around with it! The goal is for you to implement a clear all button, that removes all list items! Good luck!
 
 
