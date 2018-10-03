@@ -1,5 +1,5 @@
-// Exercise 1: Array Practice
-// In this exercise, you will be practice using array methods.
+/* Exercise 1: Array Practice
+In this exercise, you will be practice using array methods. */
 
 const arr = ["USC", "UCLA",  "UCI", "SDSU", "CSUN", "UCSD"]
 
