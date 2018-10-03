@@ -1,6 +1,10 @@
-# List App Overview
+# Table of Contents
+  * [Setting Up a Web Server](#web-server)
+  * [Using Chrome Developer Tools](#chrome-tools)
+  * [Document Object Model (DOM)](#dom)
+  * [Running the List App, Plus Your Challenge](#challenge)
 
-## Setting Up a Web Server
+## Setting Up a Web Server <a id="web-server"></a>
 We will be using live-server to set up a web server for local development. Download it with the following command
 
 `npm install -g live-server`
@@ -17,29 +21,10 @@ I will be using Google Chrome for the rest of the lesson, so feel free to downlo
 
 Live-server is extremely useful, as you can make changes and have your local web page update automatically.
 
-## Using Chrome Developer Tools
+## Using Chrome Developer Tools <a id="chrome-tools"></a>
 You can use the console in Chrome Developer Tools to inspect elements of HTML pages and look at the console that can be used to debug your JavaScript file. You can access it by clicking on the three dots in the upper right corner -> More Tools -> Developer Tools. The Elements tab shows the HTML page while the Console tab shows the output from console from the JavaScript file. 
 
-## Practice HTML
-Put the following code into index.html.
-```
-<!DOCTYPE <!DOCTYPE html>
-<html>
-    <head>
-    </head>
-    <body>
-        <h1>List App</h1>
-        <h2>Create your list!</h2>
-        <p id="first"> Let's get started</p>
-        <p id="second"> I love SOLES</p>
-        <input>
-        <button> Create List Item </button>
-        <script src="list-app.js"></script>
-    </body>
-</html>
-```
-
-## Document Object Model (DOM)
+## Document Object Model (DOM) <a id="dom"></a>
 The DOM allows you to change elements in HTML in JavaScript. You use the global variable `document` in the JavaScript file to access the DOM. 
 
 ### Document Methods/Properties Review
@@ -119,11 +104,11 @@ e.target.textContent = "I'm different"
 ```
 There are many other tags available in JavaScript. The remaining tags that are used in the following list app are `form` and `input`. Try to figure out how they work in the app!
 
-## Running the List App, Plus Your Challenge!
+## Running the List App, Plus Your Challenge! <a id="challenge"></a>
 You can run the list app by running:
 ```
 live-server list.app
 ```
-You will now see a simple List App web page. Mess around with it! The goal is for you to implement a clear all button directly on the page! Good luck!
+You will now see a simple List App web page. Mess around with it! The goal is for you to implement a clear all button, that removes all list items! Good luck!
 
 

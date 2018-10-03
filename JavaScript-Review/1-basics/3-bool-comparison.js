@@ -1,5 +1,5 @@
-// Lesson 3: Bool and Comparison Operators
-// In this Lesson you will learn about different comparison operators.
+/* Lesson 3: Bool and Comparison Operators
+In this Lesson you will learn about different comparison operators. */
 
 
 /* 
@@ -18,15 +18,15 @@ console.log(3 === 3); // True
 console.log(3 == '3'); // True
 console.log(3 === '3'); // False
 
-// !== Returns true if the operands are of the same type but not equal, or are of different type, false otherwise.
-// != Returns true if the operands are equal but not the same type, false otherwise.
+/* !== Returns true if the operands are of the same type but not equal, or are of different type, false otherwise.
+!= Returns false if the operands are equal but not the same type, true otherwise. */
 
 console.log('Ucla' !== 3); // True
 console.log('Ucla' !== 'Ucla'); // False
 console.log(3 !== '3'); // True
 console.log(3 != '3'); // False
 
-/* the following comparison operators exist as well:
+/* The following comparison operators exist as well:
 > greater than
 >= greater than or equal to 
 < less than

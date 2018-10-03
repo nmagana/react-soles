@@ -1,5 +1,5 @@
-// Lesson 11: Array Searches
-// In this lesson, you will learn methods to search within an array.
+/* Lesson 11: Array Searches
+In this lesson, you will learn methods to search within an array. */
 
 const nums = [0, 100, 200, 300, 400, 500];
 
@@ -17,23 +17,23 @@ const storeItems = [{
     item: 'Chicken'
 }];
 
-// This will return false. This is because when objects are being compared, they are only
-// equal if they are the same reference, even though their items are exactly the same.
+/* This will return false. This is because when objects are being compared, they are only
+equal if they are the same reference, even though their items are exactly the same. */
 console.log(storeItems.indexOf({
     aisle: 8,
     item: 'Chicken'
 }));
 
-// For objects, use the findIndex function instead, which allows to write a more flexible
-// callback function as a parameter. The function will return the first index
-// that returns true.
+/* For objects, use the findIndex function instead, which allows to write a more flexible
+callback function as a parameter. The function will return the first index
+that returns true. */
 
 console.log(storeItems.findIndex(function(storeItem) {
     if (storeItem.aisle == 1 && storeItem.item == 'Eggs') {return true;}
 }));
 
-// In order to get the actual item, use the find method.
+/* In order to get the actual item, use the find method.
+This will return the object with the Chicken item. */
 console.log(storeItems.find(function(storeItem) {
     if (storeItem.aisle == 8) {return true;}
 }));
-// above returns the object with item equal to Chicken.
