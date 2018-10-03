@@ -26,8 +26,8 @@ console.log(var1); // Prints 4
 the compiler creates it as a global variable. This can cause bugs. Always
 make sure to use the let keyword when making a variable. */
 
-// Example of Leaked Global
-// Don't worry about the syntax for a function yet, it will be covered in the next lesson!
+/* Example of Leaked Global
+Don't worry about the syntax for a function yet, it will be covered in the next lesson! */
 
 let myFunc = function() {
     bruins = 5;
