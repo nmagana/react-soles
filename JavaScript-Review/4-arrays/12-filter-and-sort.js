@@ -14,18 +14,18 @@ const storeItems = [{
     item: 'Chicken'
 }];
 
-const newArray = storeItems.filter(function(storeItem) {
+const filteredArray = storeItems.filter(function(storeItem) {
     if (storeItem.aisle > 2) {return true;}
 });
 
-console.log(newArray);
+console.log(filteredArray);
 
-// sort - sort function based on another callback function
-// the call back function compares two different items
-// return -1 with a comparison if you want that to come before,
-// return 1 with a comparison if you want that to come after,
-// return 0 if they are the same, meaning nothing happens.
-// modifies the existing 
+/* sort - sort function based on another callback function
+the call back function compares two different items
+return -1 with a comparison if you want that to come before,
+return 1 with a comparison if you want that to come after,
+return 0 if they are the same, meaning nothing happens.
+modifies the existing array in place */
 
 storeItems.sort(function(a, b) {
     if (a.item[0] < b.item[0]) {return -1;} 
@@ -33,4 +33,4 @@ storeItems.sort(function(a, b) {
     else {return 0;}
 })
 
-console.log(sortedArray);
+console.log(storeItems);
