@@ -1,12 +1,11 @@
-// Lesson 9: Array Basics
-// In this lesson you will be looking at the basics of array creation and
-// learn how to use some useful array methods
+/* Lesson 9: Array Basics
+In this lesson you will be looking at the basics of array creation and learn how to use some 
+useful array methods. */
 
 // Syntax to create array
 const reminders = [100, 200, 300];
 
-// You can access items by indexing them. Accessing the array out of bounds
-// will return undefined
+// You can access items by indexing them. Accessing the array out of bounds will return undefined. 
 
 // gets first item
 console.log(reminders[0]); // Prints Do Homework
@@ -19,7 +18,7 @@ const mixedArray = ['string', true, 10];
 
 // The following are some methods for arrays.
 
-// push - adds an element to the end of an array
+// push - adds an element to the end of an array.
 reminders.push(400);
 console.log(reminders);
 
@@ -35,10 +34,10 @@ console.log(reminders)
 reminders.shift();
 console.log(reminders);
 
-// splice - allows to insert, remove, or do both at any index
-// first argument - index to insert/delete
-// second argument - num items to delete
-// third argument, items to insert
+/* splice - allows to insert, remove, or do both at any index
+first argument - index to insert/delete
+second argument - num items to delete
+third argument, items to insert */
 reminders.splice(1, 0, 1, 2, 3);
 console.log(reminders);
 
