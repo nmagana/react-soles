@@ -1,6 +1,5 @@
-// Lesson 12: Filter and Sort Arrays
-// In this lesson you will learn how to use the
-// filter and sort methods used by arrays
+/* Lesson 12: Filter and Sort Arrays
+In this lesson you will learn how to use the filter and sort methods used by arrays. */
 
 // filter - removes items based on the callback function passed in
 const storeItems = [{
