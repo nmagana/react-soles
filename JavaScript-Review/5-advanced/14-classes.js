@@ -1,6 +1,5 @@
-// Lesson 14: Classes
-// In this lesson, you will learn the syntax for creating classes, subclasses,
-// getters, and setters
+/* Lesson 14: Classes
+In this lesson, you will learn the syntax for creating classes, subclasses, getters, and setters. */
 
 // Syntax for writing classes
 class Person {
