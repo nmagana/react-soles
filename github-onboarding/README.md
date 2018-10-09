@@ -9,6 +9,7 @@ When you clone a repository, you clone it to your working directory on your comp
 
 #### Staging Area
 When files are created or updated, your local repository tracks that there are changes made. You can see this by running the following command in your working directory. 
+
 ```
 git status
 ```
@@ -22,20 +23,67 @@ Changes not staged for commit:
 	modified:   README.md
 ```
 
-As you can see, your local repository tracked changes from your working directory, but it noticed that they aren't staged. The staging area is basically you telling your local repository that you are ready for the changes in staging area to be committed. This then creates a commit, which you can think of as a snapshot of your working directory with the new changes that you made. You can add files to the staging area with the following command (git status also tells you how to do it if you forget!):
+As you can see, your local repository tracked changes from your working directory, but it noticed that they aren't staged. The staging area is basically you telling your local repository that you are ready for the changes in staging area to be committed. This then creates a commit, which you can think of as a snapshot of your working directory with the new changes that you made. 
+
+There are also two states that files will be in when they are updated: **tracked** and **untracked**. Tracked files are files that are already being monitored by the local repository, because they were added and committed previously. Untracked files, on the other hand, are files that were newly created. Once they are added and committed, and future changes will have GitHub treat it as a tracked file.
+
+
+You can add files to the staging area with the following command (git status also tells you how to do it if you forget!):
 
 ```
 git add <file>
 ```
 
-You can use the following command to add all files that were updated (includes deleted files):
+You can use the following command to add all files that were updated (does not include created files):
 
 ```
 git add -u
 ```
 
-You can use the following command to add all changes:
+You can use the following command to add all changes (includes created files):
 
 ```
 git add -A
 ```
+
+If you made changes to a file that you want to revert to, use the following command:
+
+```
+git checkout -- <file>
+```
+
+As seen in the diagram above, git checkout gets information that is committed in the local repository. This is what makes GitHub so powerful!
+
+#### Committing
+Once files are in the staging area, you can commit them to the local repository with the following command:
+
+```
+git commit -m 'MESSAGE HERE'
+```
+
+The commit is now saved in the local repository. Make sure to also write a concise message so people can get a good idea of what your commit was about without reading your code. If you want to see the commit you made, use the following command:
+
+```
+git log
+```
+
+This will provide all the commits that you have in the local repository, starting with the most recent. You will see a lot of these:
+
+```
+commit 3b47c409ffe88a05d8a655c12906248d28b6e87e
+Author: nmagana <nmagana2112@gmail.com>
+Date:   Tue Oct 9 10:43:57 2018 -0700
+
+    Create README.md
+```
+
+The commit has a Secure Hash Algorithm (SHA) ID that uniquely identifies the commit that was made. It also shows the author who created the commit, and the date the commit was created.
+
+Another shortcut to save from having to add and commit each time is using the following command:
+
+```
+git commit -am 'MESSAGE HERE'
+```
+**Note: This only works with files that are updated, this won't add files that are untracked.
+
+
