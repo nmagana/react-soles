@@ -4,10 +4,12 @@ In this section you will learn the basic workflow of using GitHub, which will be
 ## GitHub Repository Overview
 ![](https://i.stack.imgur.com/UvZ0M.png)
 
+## Local Repository
+
 ### Working Directory
 When you clone a repository, you clone it to your working directory on your computer, and create a **local repository** on your computer as well. This allows you to make **commits** (explained below) on your local repository without affecting the **remote repository** (think of the remote repository as what you see on the GitHub website). The local repository is extremely useful because you can create commits that you can return to, branch off from, etc.. Don't worry if you are confused, this will all be explained shortly! 
 
-#### Staging Area
+### Staging Area
 When files are created or updated, your local repository tracks that there are changes made. You can see this by running the following command in your working directory. 
 
 ```
@@ -54,7 +56,7 @@ git checkout -- <file>
 
 As seen in the diagram above, git checkout gets information that is committed in the local repository. This is what makes GitHub so powerful!
 
-#### Committing
+### Committing
 Once files are in the staging area, you can commit them to the local repository with the following command:
 
 ```
@@ -84,6 +86,8 @@ Another shortcut to save from having to add and commit each time is using the fo
 ```
 git commit -am 'MESSAGE HERE'
 ```
-**Note: This only works with files that are updated, this won't add files that are untracked.
+**Note: This only works with files that are updated, this won't add files that are untracked.**
+
+## Remote Repository
 
 
