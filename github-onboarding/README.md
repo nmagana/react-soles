@@ -136,12 +136,35 @@ If you want to merge a branch into another branch, first checkout the branch tha
 git merge <branch-with-changes>
 ```
 
-If you run into a merge conflict, this is because you have changes in parts of your code that another branch or remote reference has made. You will go through a simple merge conflict example later in this tutorial.
+If you run into a merge conflict, this is because you have changes in parts of your code that another branch or remote reference has made. You will go through a simple merge conflict example later in this tutorial. 
 
 ### Git Pull
 
-As can be seen in the diagram, a `git pull` is actually just a combination of a `git fetch` followed by a `git merge`. 
+As can be seen in the diagram, a `git pull` is actually just a combination of a `git fetch` followed by a `git merge`. Before continuing to work in your working directory, it is good practice to pull changes to see if there are any merge conflicts that you need to attend to.
 
-## Pull Request Example 
+## Pull Request Walkthrough
+
+Pull requests are a way in which code can be reviewed in the software development process. It is a good way to prevent people from directly pushing to master, and allows for an improvement in code quality. Below outlines the steps to create a pull request.
+
+### Create a Feature Branch
+
+The first step is to create a new branch from master. This branch will be merged back into master when the pull request is finished. You can create a branch and start developing on it with the following command when you are on the master branch:
+
+```
+git checkout -b <branch-name>
+```
+
+You can see that you are on the branch by using `git status`.
+
+### Make Your Changes, Commit, and Push
+
+Make your changes in the branch and commit. Use the `git push` command to push your changes. Since you haven't set up your remote reference for the branch yet, GitHub will prompt you with a command to enter. Enter that command! 
+
+### Create Pull Request
+
+Now that your changes are made, go to the GitHub website. Near the top, it should prompt if you want to create a pull request. Click on that button. Give your pull request a good title and feel free to write down any more information. You finished your pull request!
+
+<Leila> <insert-emoji>
+<Omar> <insert-emoji>
 
 
