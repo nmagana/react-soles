@@ -91,6 +91,9 @@ Another shortcut to save from having to add and commit each time is using the fo
 ```
 git commit -am 'MESSAGE HERE'
 ```
+
+In the world of GitHub, there is a saying of `Commit early and often`. This doesn't mean to commit every time you write a character, but it does mean to commit before anything gets extremely complicated. This allows you to go back to figure out whenever things went wrong in your code and you are able to roll back to another working snapshot of your working directory.
+
 **Note: This only works with files that are updated, this won't add files that are untracked.**
 
 ## Remote Repository
@@ -137,7 +140,8 @@ If you run into a merge conflict, this is because you have changes in parts of y
 
 ### Git Pull
 
+As can be seen in the diagram, a `git pull` is actually just a combination of a `git fetch` followed by a `git merge`. 
 
-
+## Pull Request Example 
 
 
