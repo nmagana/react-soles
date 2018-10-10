@@ -1,15 +1,19 @@
 # GitHub Onboarding
+
 In this section you will learn the basic workflow of using GitHub, which will be very useful for the remainder of the course, as well as your internship/job. Hopefully you will continue using this as a reference for the future 😀
 
 ## GitHub Repository Overview
+
 ![](https://i.stack.imgur.com/UvZ0M.png)
 
 ## Local Repository
 
 ### Working Directory
+
 When you clone a repository, you clone it to your working directory on your computer, and create a **local repository** on your computer as well. This allows you to make **commits** (explained below) on your local repository without affecting the **remote repository** (think of the remote repository as what you see on the GitHub website). The local repository is extremely useful because you can create commits that you can return to, branch off from, etc.. Don't worry if you are confused, this will all be explained shortly! 
 
 ### Staging Area
+
 When files are created or updated, your local repository tracks that there are changes made. You can see this by running the following command in your working directory. 
 
 ```
@@ -57,6 +61,7 @@ git checkout -- <file>
 As seen in the diagram above, git checkout gets information that is committed in the local repository. This is what makes GitHub so powerful!
 
 ### Committing
+
 Once files are in the staging area, you can commit them to the local repository with the following command:
 
 ```
@@ -89,5 +94,50 @@ git commit -am 'MESSAGE HERE'
 **Note: This only works with files that are updated, this won't add files that are untracked.**
 
 ## Remote Repository
+
+GitHub is extremely powerful because of the remote repository. The remote repository is what allows for collaboration with everyone. You can think of it as the code that is on this website here. All the changes you were being made won't be seen until you **push** your code to the remote repository. Let's explore the concepts! 
+
+Use the following to command to show all branches (local and remote) in the repository. Don't worry if you don't know about branching, we will be demonstrating an example shortly!
+
+```
+git branch -a
+```
+
+You should be getting an output that looks like this, depending on how many branches you have:
+
+```
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+```
+
+The * denotes what branch you are currently on. The `remotes/origin/master` is not a branch that you can switch to, but its actually a reference of master that exists on the remote repository! In GitHub collaboration, developers will constantly be  commiting changes to the remote repository. You can use the following commands below to interact with the remote repository!
+
+### Git Fetch
+
+As the name describes it, the following command will fetch updates from the remote repository to make your local repository aware of any new updates to files that have occured:
+
+```
+git fetch
+```
+
+Use `git fetch` whenever you want to know if there any updates, without actually applying these changes to your code. If you want to merge these changes into your working directory, use the following command:
+
+```
+git merge 
+```
+
+If you want to merge a branch into another branch, first checkout the branch that you want the changes that you want to make, then run the following command:
+
+```
+git merge <branch-with-changes>
+```
+
+If you run into a merge conflict, this is because you have changes in parts of your code that another branch or remote reference has made. You will go through a simple merge conflict example later in this tutorial.
+
+### Git Pull
+
+
+
 
 
