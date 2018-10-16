@@ -164,7 +164,7 @@ Make your changes in the branch and commit. Use the `git push` command to push y
 
 Now that your changes are made, go to the GitHub website. Near the top, it should prompt if you want to create a pull request. Click on that button. Give your pull request a good title and feel free to write down any more information. You finished your pull request!
 
-Leila <insert-emoji>
+Leila 💀
 Omar 👻
 
 
