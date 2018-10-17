@@ -1,0 +1,49 @@
+/* Exercise 2: Objects Practice
+In this exercise, you will be practicing creating objects, object methods. */
+
+/* Object 1: Vending Machine Object
+Properties:
+Capacity -> have it start to be 100
+Stock -> have it start to be 50
+Methods:
+  addStock -> takes in the amount to stock, stocks if it doesn't go over capacity. Print to console if not possible.
+  getItem -> removes one item from the vending machine. Print to console if stock is 0. */
+  
+ let vendingMachine = {
+    capacity: 100;
+    stock: 50;
+    addStock: function ( store ) {
+        if ( store + stock > capacity ){
+            console.log("Not possible");}
+        else{
+            stock = stock + store;}
+        return;
+    }
+    getItem: function() {
+        if (stock > 0){
+            stock = stock - 1;}
+        else{
+            console.log("Empty");}
+        return;
+
+/* Object 2: Design your own Object!
+Criteria: Two Properties and Two Methods, have fun! */
+
+let robot = {
+    arms: 10;
+    energy: 100;
+    freeArms: function( tasks ) {
+        if (arms-tasks >= 0){
+            arms = arms - 1;
+            return true;
+     }
+     doTask: function(tasks) {
+        if (freeArms.freeArms(tasks) === true){
+            console.log("Your robot can do it");}
+        else{
+            console.log("Your robot can't do it");}
+        return;
+     }
+}
+         
+            
