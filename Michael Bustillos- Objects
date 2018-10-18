@@ -9,14 +9,16 @@ Methods:
   addStock -> takes in the amount to stock, stocks if it doesn't go over capacity. Print to console if not possible.
   getItem -> removes one item from the vending machine. Print to console if stock is 0. */
   
+  /*ADDED "this." TO STOCK IN VENDING MACHINE, REMOVED RETURN STATEMENT. ADDED "};" AT END OF OBJECT AND LET STATEMENT FOR ROBOT*/
+  
  let vendingMachine = {
     capacity: 100;
     stock: 50;
     addStock: function ( store ) {
-        if ( store + stock > capacity ){
+        if ( store + this.stock > capacity ){
             console.log("Not possible");}
         else{
-            stock = stock + store;}
+            this.stock = this.stock + store;}
         return;
     }
     getItem: function() {
@@ -24,7 +26,8 @@ Methods:
             stock = stock - 1;}
         else{
             console.log("Empty");}
-        return;
+    }
+};
 
 /* Object 2: Design your own Object!
 Criteria: Two Properties and Two Methods, have fun! */
@@ -44,6 +47,6 @@ let robot = {
             console.log("Your robot can't do it");}
         return;
      }
-}
+};
          
             
