@@ -2,13 +2,14 @@
 In this exercise, you will be creating functions for different scenarios.
 Don't worry about invalid input being passed in. */
 
+/*ADDED PARENTHESES AFTER LET STATEMENTS FOR FUNCTIONS AND ADDED PARENTHESES ON LOG STATEMENT AT BOTTOM*/
 
 /* Function 1: Feet to Kilometer Converter
 Create a function that takes in feet, and converts it to kilometers. Return the result. */
 
 let ft2km = function ( feet ) {
   return feet * .0003048;
-}
+}; 
 
 /* Function 2: Tip Calculator
 Create a function that takes in the amount that the meal cost, and a tip given as a decimal.
@@ -16,7 +17,7 @@ Have the default value of the tip be 0.15. Return the amount that should be tipp
 
 let tipCalc = function ( meal, tip = .15) {
   return meal *tip;
-}
+};
 
 /* Function 3: Should I wear a jacket?
 Create a function that takes in the temperature (Assume Farenheit) and a bool if it is raining.
@@ -30,6 +31,5 @@ let wearJacket = function ( farenheit , rain = false ) {
     if (farenheit < 40 || (farenheit >= 40 && farenheit <= 80 && rain === true)){
         console.log("You should wear a jacket");}
      else{
-        console.log("You do not need to wear a jacket";}
-     return;
-}
+        console.log("You do not need to wear a jacket");} /*ADDED PARENTHESES*/
+};
