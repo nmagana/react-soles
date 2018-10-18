@@ -15,15 +15,14 @@ Methods:
     capacity: 100;
     stock: 50;
     addStock: function ( store ) {
-        if ( store + this.stock > capacity ){
+        if ( store + this.stock > this.capacity ){
             console.log("Not possible");}
         else{
             this.stock = this.stock + store;}
-        return;
     }
     getItem: function() {
         if (stock > 0){
-            stock = stock - 1;}
+            this.stock = this.stock - 1;}
         else{
             console.log("Empty");}
     }
@@ -36,8 +35,8 @@ let robot = {
     arms: 10;
     energy: 100;
     freeArms: function( tasks ) {
-        if (arms-tasks >= 0){
-            arms = arms - 1;
+        if (this.arms-tasks >= 0){
+            this.arms = this.arms - 1;
             return true;
      }
      doTask: function(tasks) {
@@ -45,7 +44,7 @@ let robot = {
             console.log("Your robot can do it");}
         else{
             console.log("Your robot can't do it");}
-        return;
+        
      }
 };
          
