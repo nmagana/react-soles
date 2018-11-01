@@ -5,19 +5,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 class DysfunctionalApp extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
+        state = {
             options: this.props.options
         };
-    }
+
+    removeAllOptions = () => {
+        this.setState({
+            options: []
+        });
+    };
+
     render() {
         const subtitle = 'Let the computer choose!';
         return (
             <div>
                 <Header subtitle={subtitle}/>
                 <Action />
-                <Options options={this.state.options}/>
+                <Options options={this.state.options} removeAllOptions={this.removeAllOptions}/>
                 <AddOption />
             </div>
         );
@@ -64,7 +68,7 @@ class Options extends React.Component {
         return (
             <div>
                 {!this.props.options.length && <p>Please put in an option to get started!</p>}
-                <button>Remove All</button>
+                <button onClick={this.props.removeAllOptions}>Remove All</button>
                {this.renderOptions(this.props.options)}
             </div>
         )
