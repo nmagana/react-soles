@@ -25,6 +25,10 @@ class DysfunctionalApp extends React.Component {
     }
 }
 
+DysfunctionalApp.defaultProps = {
+    options: []
+};
+
 
 
 class Header extends React.Component {
