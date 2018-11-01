@@ -8,8 +8,7 @@ class DysfunctionalApp extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            options: this.props.options,
-            selectedOption: undefined
+            options: this.props.options
         };
     }
     render() {
@@ -18,7 +17,7 @@ class DysfunctionalApp extends React.Component {
             <div>
                 <Header subtitle={subtitle}/>
                 <Action />
-                <Options />
+                <Options options={this.state.options}/>
                 <AddOption />
             </div>
         );
@@ -26,7 +25,7 @@ class DysfunctionalApp extends React.Component {
 }
 
 DysfunctionalApp.defaultProps = {
-    options: []
+    options: ["Movies", "Beach", "Study"]
 };
 
 
@@ -57,14 +56,26 @@ class Action extends React.Component {
 }
 
 class Options extends React.Component {
+    renderOptions(options) {
+        return options.map((option) => <Option key={option} option={option}/>);
+    }
+    
     render() {
         return (
             <div>
-                <p>Please put in an option to get started!</p>
+                {!this.props.options.length && <p>Please put in an option to get started!</p>}
                 <button>Remove All</button>
-                <p>Render Options Here</p>
+               {this.renderOptions(this.props.options)}
             </div>
         )
+    }
+}
+
+class Option extends React.Component {
+    render() {
+        return (
+            <p>Option: {this.props.option}</p>
+        );
     }
 }
 
