@@ -69,7 +69,7 @@ class AddOption extends React.Component {
         return (
             <div>
                 <form>
-                    <input name="option_input" autoComplete="off"/>
+                    <input/>
                     <button>Add Option</button>
                 </form>
             </div>
