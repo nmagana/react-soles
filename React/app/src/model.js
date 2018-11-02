@@ -15,6 +15,15 @@ class DysfunctionalApp extends React.Component {
         });
     };
 
+    handleSubmit = (option) => {
+        if (!option) {
+            return 'Input an option!';
+        } else if (this.state.options.indexOf(option) > -1) {
+            return 'Option exists!';
+        }
+        this.setState((prevState) => ({options: prevState.options.concat(option)}));
+    }
+
     render() {
         const subtitle = 'Let the computer choose!';
         return (
@@ -22,7 +31,7 @@ class DysfunctionalApp extends React.Component {
                 <Header subtitle={subtitle}/>
                 <Action />
                 <Options options={this.state.options} removeAllOptions={this.removeAllOptions}/>
-                <AddOption />
+                <AddOption handleSubmit={this.handleSubmit}/>
             </div>
         );
     }
@@ -78,17 +87,29 @@ class Options extends React.Component {
 class Option extends React.Component {
     render() {
         return (
-            <p>Option: {this.props.option}</p>
+            <div>
+                {this.props.option}
+            </div>
         );
     }
 }
 
 class AddOption extends React.Component {
+    state = {
+        error: undefined
+    };
+
+    handleAddOption = (e) => {
+        e.preventDefault();
+        const option = e.target.elements.option_input.value.trim();
+        const error = this.props.handleSubmit(option);
+    }
+
     render() {
         return (
             <div>
-                <form>
-                    <input/>
+                <form onSubmit={this.handleAddOption}>
+                    <input name="option_input"/>
                     <button>Add Option</button>
                 </form>
             </div>
