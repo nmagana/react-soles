@@ -1,6 +1,3 @@
-// This code won't be rendered, but will just be used as a reference to
-// where we are in the course!
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -14,6 +11,14 @@ class DysfunctionalApp extends React.Component {
             options: []
         });
     };
+
+    handleAction = () => {
+        const optionsLength = this.state.options.length;
+        if (optionsLength > 0) {
+            const chosenOption = this.state.options[Math.floor(Math.random() * optionsLength)];
+            alert(chosenOption);
+        }
+    }
 
     handleSubmit = (option) => {
         if (!option) {
@@ -29,7 +34,7 @@ class DysfunctionalApp extends React.Component {
         return (
             <div>
                 <Header subtitle={subtitle}/>
-                <Action />
+                <Action handleAction={this.handleAction}/>
                 <Options options={this.state.options} removeAllOptions={this.removeAllOptions}/>
                 <AddOption handleSubmit={this.handleSubmit}/>
             </div>
@@ -38,7 +43,7 @@ class DysfunctionalApp extends React.Component {
 }
 
 DysfunctionalApp.defaultProps = {
-    options: ["Movies", "Beach", "Study"]
+    options: []
 };
 
 
@@ -62,7 +67,7 @@ class Action extends React.Component {
     render() {
         return (
             <div>
-                <button>What Should I do?</button>
+                <button onClick={this.props.handleAction}>What Should I do?</button>
             </div>
         )
     }
@@ -103,11 +108,23 @@ class AddOption extends React.Component {
         e.preventDefault();
         const option = e.target.elements.option_input.value.trim();
         const error = this.props.handleSubmit(option);
+        // sets the state of the error
+        // Note: if the variable is equal to the state variable, instead of doing
+        // this.setState({error: error});, if they are the same name, you can do
+        // this.setState({error});, making it more consise
+        this.setState({error});
+        // if there is no error (error is undefined),
+        // clear the value of the input
+        if (!error){
+            e.target.elements.option_input.value = '';
+        }
     }
 
+    // using the && syntax as used in previous examples (:
     render() {
         return (
             <div>
+                {this.state.error && <p>{this.state.error}</p>}
                 <form onSubmit={this.handleAddOption}>
                     <input name="option_input"/>
                     <button>Add Option</button>
