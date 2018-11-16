@@ -16,17 +16,21 @@ export default class DysfunctionalApp extends React.Component {
 
     componentDidMount() {
         const json = localStorage.getItem('options');
-        const options = JSON.parse(json);
-        if (options) {
-            this.setState({options});
+        if (json) {
+            const options = JSON.parse(json);
+            if (options) {
+                this.setState({options});
+            }
         }
+        window.addEventListener(
+            'unload',
+            this.saveStateToLocalStorage
+        );
     }
 
-    componentDidUpdate(prevProps, prevState) {
-        if (prevState.options.length != this.state.options.length) {
-            const json = JSON.stringify(this.state.options);
-            localStorage.setItem('options', json);
-        }
+    saveStateToLocalStorage = () => {
+        const json = JSON.stringify(this.state.options);
+        localStorage.setItem('options', json);
     }
 
     removeAllOptions = () => {

@@ -1,0 +1,30 @@
+.button {
+    background: $light-coral;
+    color: $azure;
+    font-weight: 900;
+    border: none;
+}
+
+.big-button {
+    width: 100%;
+    padding: $m-size;
+    font-size: $l-size;
+    border-bottom: $s-size solid $dark-coral;
+}
+
+.big-button:hover {
+    opacity: .9;
+}
+
+.big-button:disabled {
+    opacity: .5;
+}
+
+.big-button:active {
+    background-color: $dark-coral;
+}
+
+.button--add_option {
+    border-bottom: $xs-size solid $dark-coral;
+}
+
