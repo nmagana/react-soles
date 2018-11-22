@@ -2,7 +2,7 @@ import path from 'path';
 const publicPath = path.join(__dirname, 'public');
 
 module.exports = {
-    entry: "./src/app.js",
+    entry: "./src/model.js",
     output: {
         path: publicPath,
         filename: 'bundle.js'
@@ -19,7 +19,7 @@ module.exports = {
                 'css-loader',
                 'sass-loader'
            ],
-           test: /\.scss$/
+           test: /\.s?css$/
         }
     ]
     },

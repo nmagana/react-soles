@@ -1,3 +1,12 @@
+button {
+    cursor: pointer;
+    outline: none;
+}
+
+button:disabled {
+    cursor: default;
+}
+
 .button {
     background: $light-coral;
     color: $azure;
@@ -26,5 +35,17 @@
 
 .button--add_option {
     border-bottom: $xs-size solid $dark-coral;
+    padding: 0 $xm-size;
 }
 
+.button--remove_all {
+    background: none;
+    color: $light-coral;
+    padding: 0;
+}
+
+.button--remove-option {
+    background: none;
+    color: $light-coral;
+    padding: 0 $m-size;
+}

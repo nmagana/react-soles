@@ -1,14 +1,16 @@
 import React from 'react';
 
 const Footer = (props) => (
-    <div>
-        <p>{props.title}</p>
-        <p>{props.year}</p>
+    <div className='footer'>
+        <div className='container'>
+            <p className='footer__copyright'>{props.title}</p>
+            <p>{props.year}</p>
         </div>
+    </div>
 );
 
 Footer.defaultProps = {
-    title: "A Nico Magaña Production ©",
+    title: "© A Nico Magaña Production",
     year: "Established 2018"
 };
 

@@ -1,8 +1,9 @@
-// imports the settings first, which the rest of the imports uses
-// for files with _ in front, it means that they are partials, and
-// are used so they don't get downloaded as a whole css file
 @import './base/settings';
 @import './components/container';
 @import './base/base';
 @import './components/header';
 @import './components/button';
+@import './components/option';
+@import './components//widget';
+@import './components/add_option';
+@import './components/footer';

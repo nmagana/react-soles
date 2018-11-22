@@ -1,18 +1,21 @@
 .header {
     background: $light-blue;
-    padding: 0 $l-size;
+    padding: $xs-size;
     font-family: 'Courier New', Courier, monospace;
-    border: $s-size solid $light-coral;
     margin-bottom: $l-size;
+    text-align: left;
 }
 
 .header__title {
-    font-size: $l-size;
-    margin-bottom: $m-size;
+    margin: 0;
+    font-size: $xm-size;
+    margin-bottom: $s-size;
     color: $light-coral;
 }
 
 .header__subtitle {
-    font-size: $m-size;
+    margin: 0;
+    font-size: 2rem;
     font-weight: 400;
+    color: $black;
 }
