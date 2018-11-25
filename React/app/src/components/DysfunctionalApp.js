@@ -65,25 +65,24 @@ export default class DysfunctionalApp extends React.Component {
     handleExitModal = () => {
         this.setState({selectedOption: undefined});
     }
+      
 
     render() { 
         return (
-            <div className='Site'>
-                <div className='Site-content'>
-                    <Header subtitle={this.subtitle}/>
+            <div>
+                <Header subtitle={this.subtitle}/>
                     <div className='container'>
                         <Action hasOptions={!!this.state.options.length} handleAction={this.handleAction}/>
-                            <div className='widget'>
+                        <div className='widget'>
                             <Options 
                                 options={this.state.options} 
                                 removeAllOptions={this.removeAllOptions}
                                 deleteOption={this.deleteOption}
-                            />
+                        />
                             <AddOption handleSubmit={this.handleSubmit}/>
-                            </div>
+                        </div>
                     </div>
-                    <OptionModal selectedOption={this.state.selectedOption} handleExitModal={this.handleExitModal}/>
-                </div>
+                <OptionModal selectedOption={this.state.selectedOption} handleExitModal={this.handleExitModal}/>
                 <Footer />
             </div>
         );
