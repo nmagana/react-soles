@@ -1,0 +1,35 @@
+/* Exercise 1: Function Practice
+In this exercise, you will be creating functions for different scenarios.
+Don't worry about invalid input being passed in. */
+
+/*ADDED PARENTHESES AFTER LET STATEMENTS FOR FUNCTIONS AND ADDED PARENTHESES ON LOG STATEMENT AT BOTTOM*/
+
+/* Function 1: Feet to Kilometer Converter
+Create a function that takes in feet, and converts it to kilometers. Return the result. */
+
+let ft2km = function ( feet ) {
+  return feet * .0003048;
+}; 
+
+/* Function 2: Tip Calculator
+Create a function that takes in the amount that the meal cost, and a tip given as a decimal.
+Have the default value of the tip be 0.15. Return the amount that should be tipped. */
+
+let tipCalc = function ( meal, tip = .15) {
+  return meal *tip;
+};
+
+/* Function 3: Should I wear a jacket?
+Create a function that takes in the temperature (Assume Farenheit) and a bool if it is raining.
+Set the default for the bool to be false.
+Print to the console "You should wear a jacket" for the following scenarios:
+The temperature is less than 40.
+The temperature is between 40-80 inclusive and it is raining.
+All other scenarios print "You do not need to wear a jacket" */f
+
+let wearJacket = function ( farenheit , rain = false ) {
+    if (farenheit < 40 || (farenheit >= 40 && farenheit <= 80 && rain === true)){
+        console.log("You should wear a jacket");}
+     else{
+        console.log("You do not need to wear a jacket");} /*ADDED PARENTHESES*/
+};
